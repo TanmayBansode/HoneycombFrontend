@@ -5,7 +5,7 @@ import Link from "next/link";
 export const Card = ({ title, description, imageLink, link }) => {
   return (
     <Link href={"/" + link}>
-    <div className="max-w-xs h-full my-4 rounded overflow-hidden shadow-lg border border-md border-gray-600 transition-transform duration-300 transform hover:scale-105">
+    <div className="max-w-xs my-4 rounded overflow-hidden shadow-lg border border-md border-gray-600 transition-transform duration-300 transform hover:scale-105">
       <div className="relative h-48">
         <Image
           src={"/" + imageLink}

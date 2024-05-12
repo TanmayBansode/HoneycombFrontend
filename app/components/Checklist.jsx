@@ -80,7 +80,7 @@ const Checklist = ({ roadmap, name }) => {
   return (
     <>
       {roadmap ? (
-        <div id="checklist" className="pb-12 bg-gray-900 p-8 rounded shadow-xl relative">
+        <div id="checklist" className="pb-24 p-2 md:p-6 lg:p-8 rounded shadow-xl relative border border-md border-gray-700">
           <h1 className="mb-4 text-lg font-semibold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-white text-center">
             {name}
           </h1>

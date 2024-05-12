@@ -36,7 +36,7 @@ const App = () => {
   };
 
   return (
-  <div className="bg-gradient-to-r from-black via-slate-800 to-black min-h-screen px-12 md:px-20 lg:px-32 pt-20 justify-center items-center">
+  <div className="bg-gradient-to-r from-black via-slate-800 to-black min-h-screen px-6 md:px-20 lg:px-32 pt-20 justify-center items-center">
   <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">
     Roadmap Generator
   </h1>
