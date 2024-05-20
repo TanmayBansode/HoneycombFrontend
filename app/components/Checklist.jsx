@@ -1,29 +1,5 @@
 import React, { useEffect } from "react";
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
-
-const generatePDF = (roadmap, name) => {
-  const pdf = new jsPDF("p", "px", "a4"); // Set PDF format to A4
-
-  // Select the Checklist component by its ID
-  const checklist = document.getElementById("checklist");
-
-  // Convert the component to an image
-  html2canvas(checklist, { scale: 2 }).then((canvas) => {
-    // Adjust scale if needed
-    const imgData = canvas.toDataURL("image/png");
-
-    // Calculate width and height of the image
-    const imgWidth = pdf.internal.pageSize.getWidth();
-    const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-    // Add image to PDF with margins
-    pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight, "", "FAST");
-
-    // Save the PDF with the provided name
-    pdf.save(`${name}.pdf`);
-  });
-};
+import { IoPrint } from "react-icons/io5";
 
 const ChecklistItem = ({ text }) => {
   return (
@@ -50,7 +26,7 @@ const ChecklistPhase = ({ title, items }) => {
 
 const Checklist = ({ roadmap, name }) => {
   const handlePrint = () => {
-    generatePDF(roadmap, name);
+window.print();
   };
 
   useEffect(() => {
@@ -80,28 +56,31 @@ const Checklist = ({ roadmap, name }) => {
   return (
     <>
       {roadmap ? (
-        <div id="checklist" className="pb-24 p-2 md:p-6 lg:p-8 rounded shadow-xl relative border border-md border-gray-700">
-          <h1 className="mb-4 text-lg font-semibold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-white text-center">
-            {name}
-          </h1>
-          {roadmap.map((phase, index) => (
-            <ChecklistPhase
-              key={index}
-              title={phase.title}
-              items={phase.steps}
-            />
-          ))}
-          <div
-            onClick={handlePrint}
-            className="w-32 py-1 rounded-md bg-gradient-to-tr from-indigo-600 to-purple-500 p-0.5 absolute bottom-2 right-8"
-          >
-            <div className="h-full rounded-md  flex items-center justify-center">
-              <button className="text-2xl font-manrope font-bold text-white">
-                Print
-              </button>
-            </div>
-          </div>
+      <div id="checklist" className="pb-4 p-2 md:p-6 lg:p-8 rounded shadow-xl relative border border-md border-gray-700">
+
+      <h1 className="mb-4 text-lg font-semibold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
+        {name}
+      </h1>
+      {roadmap.map((phase, index) => (
+        <ChecklistPhase
+          key={index}
+          title={phase.title}
+          items={phase.steps}
+        />
+      ))}
+
+
+        <div className="absolute top-2 right-2">
+          <button onClick={handlePrint}
+              className="text-white bg-transparent hover:bg-gradient-to-tr from-indigo-600 to-purple-500 focus:outline-none font-medium rounded-lg text-sm px-2 py-1 md:px-2 md:py-2 dark:bg-transparent dark:hover:bg-gradient-to-tr from-indigo-600 to-purple-500"
+            >
+                       <IoPrint className="w-6 h-6 md:w-8 lg:w-8" />
+            </button>
         </div>
+
+    
+    </div>
+    
       ) : (
         <p className="text-white">No roadmap available.</p>
       )}
