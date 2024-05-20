@@ -20,10 +20,10 @@ export default function Home() {
           />
 
           <Card
-            title="Tool 2"
-            description="A Tool to help you with something yet to be discovered"
-            imageLink="DummyImage2.png"
-            link="tool"
+            title="Rewriter"
+            description="A Tool to help you rewrite content in a unique way"
+            imageLink="rewrite.avif"
+            link="rewrite"
           />
 
           <Card
