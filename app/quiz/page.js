@@ -41,9 +41,6 @@ const QuizPage = () => {
     setPrompt(e.target.value);
   };
 
-  const handleNumberChange = (e) => {
-    setNumber(Number(e.target.value));
-  };
 
   const handleDifficultyChange = (e) => {
     setDifficulty(e.target.value);
@@ -52,10 +49,11 @@ const QuizPage = () => {
   const handleDecrement = () => {
     setNumber((prev) => Math.max(1, prev - 1));
   };
-
+  
   const handleIncrement = () => {
-    setNumber((prev) => prev + 1);
+    setNumber((prev) => Math.min(15, prev + 1));
   };
+  
 
   return (
     <div className="bg-gradient-to-r from-black via-slate-800 to-black min-h-screen px-6 md:px-20 lg:px-32 pt-20 pb-8 justify-center items-center">
@@ -106,10 +104,10 @@ const QuizPage = () => {
                   type="number"
                   id="counter-input"
                   data-input-counter
-                  onChange={handleNumberChange}
                   className="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 w-12 text-center"
                   value={number}
                   required
+                  disabled
                 />
                 <button
                   type="button"
