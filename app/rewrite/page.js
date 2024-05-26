@@ -7,7 +7,7 @@ import { Display } from "../components/Display";
 import HomeButton from "../components/HomeButton";
 
 const Rewrite = () => {
-    const [prompt, setPrompt] = useState("Very large-scale integration is a process of embedding or integrating hundreds of thousands of transistors onto a singular silicon semiconductor microchip. VLSI technology's conception dates back to the late 1970s when advanced level processor (computer) microchips were also in their development stages. Two of the most common VLSI devices are the microprocessor and the microcontroller.VLSI refers to an integrated circuit technology with numerous devices on a single chip. The term originates, of course, in the 1970s, along with various other scale integration classifications based on the number of gates or transistors per IC.The remarkable growth of the electronics industry is primarily due to the advances in large-scale integration technologies. With the arrival of VLSI designs, the number of possibilities for ICs in control applications, telecommunications, \n\nhigh-performance computing, and consumer electronics as a whole continues to rise.Presently, technologies like smartphones and cellular communications afford unprecedented portability, processing capabilities, and application access due to VLSI technology. The forecast for this trend indicates a rapid increase as demands continue to increase.");
+    const [prompt, setPrompt] = useState("");
     const [content, setContent] = useState();
     const [mode, setMode] = useState("Professional");
     const [isLoading, setIsLoading] = useState(false);
@@ -103,19 +103,19 @@ const Rewrite = () => {
           <option value="Snoop Dog">Snoop Dog</option>
         </select>
       </form>
-<div className="flex flex-row items-center justify-center md:mr-4">
+<div className="flex flex-row items-center justify-center md:mr-4 space-x-2">
 
       <input
         type="text"
         value={mode}
         onChange={handleModeChange}
         placeholder="Enter custom mode"
-        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 md:w-auto dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 md:w-auto dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       />
 
       <button
         onClick={handleButtonClick}
-        className="text-white bg-transparent hover:bg-gradient-to-tr from-indigo-600 to-purple-500 focus:outline-none font-medium rounded-lg text-sm px-6 py-2 dark:bg-transparent dark:hover:bg-gradient-to-tr from-indigo-600 to-purple-500"
+        className="text-white bg-transparent hover:bg-gradient-to-tr from-indigo-600 to-purple-500  focus:outline-none font-medium rounded-lg text-sm px-6 py-2 dark:bg-transparent dark:hover:bg-gradient-to-tr from-indigo-600 to-purple-500"
       >
         <FaRegPenToSquare className="w-6 mb-1 h-6" />
       </button>

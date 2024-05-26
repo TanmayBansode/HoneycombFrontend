@@ -3,7 +3,7 @@ import { Card } from "./components/Card";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen p-24 bg-gradient-to-r from-black via-slate-800 to-black">
+    <div className="flex flex-col items-center justify-between min-h-screen p-8 md:p-12 lg:p-24 bg-gradient-to-r from-black via-slate-800 to-black">
       <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">
         Project Honeycomb
       </h1>
@@ -27,10 +27,10 @@ export default function Home() {
           />
 
           <Card
-            title="Tool 3"
-            description="Another Tool to help you with something yet to be discovered"
-            imageLink="DummyImage2.png"
-            link="tool"
+            title="Quiz Generator"
+            description="A Tool to help you generate and attempt a quiz on any topic"
+            imageLink="test.jpg"
+            link="quiz"
           />
         </div>
       </div>
