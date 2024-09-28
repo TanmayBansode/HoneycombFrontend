@@ -22,12 +22,6 @@ const nodeTypes = {
 
 export default function Flowchart(flowchartData) {
 
-
-  if (flowchartData.length === 0) {
-    console.log("No flowchart data");
-    return null;
-  }
-
   const { initialNodes, initialEdges } = convertToNode(flowchartData);
 
 
@@ -49,7 +43,8 @@ export default function Flowchart(flowchartData) {
         onConnect={onConnect}
         nodeTypes={nodeTypes}
         fitView
-        className="bg-slate-900 min-h-screen"
+        colorMode="light"
+        className="bg-slate-900"
       >
         <Background />
         <MiniMap />

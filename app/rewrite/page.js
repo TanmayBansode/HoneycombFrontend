@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { Display } from "../components/Display";
-import HomeButton from "../components/HomeButton";
 
 const Rewrite = () => {
     const [prompt, setPrompt] = useState("");
@@ -60,7 +59,7 @@ const Rewrite = () => {
 
     return (
       <div className="bg-gradient-to-r from-black via-slate-800 to-black min-h-screen px-6 md:px-20 lg:px-32 pt-20 justify-center items-center">
-        <HomeButton />
+
         <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">
           Rewriter
         </h1>

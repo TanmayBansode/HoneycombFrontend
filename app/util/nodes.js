@@ -36,7 +36,7 @@ export default function convertToNode(data) {
     node,
     parentId = null,
     level = 0,
-    position = { x: 0, y: 0 }
+    position = { x: 0, y: 0}
   ) => {
     const nodeId = initialNodes.length.toString();
     const randomXOffset = Math.random() * randomOffsetRange - randomOffsetRange / 2;

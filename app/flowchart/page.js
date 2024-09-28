@@ -2,12 +2,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BsSearch } from "react-icons/bs";
-import HomeButton from "../components/HomeButton";
+
 import Flowchart from "../components/Flowchart";
 
 const App = () => {
   const [prompt, setPrompt] = useState("Dev Ops");
-  const [flowchart, setFlowchart] = useState([]);
+  const [flowchart, setFlowchart] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -41,7 +41,7 @@ const App = () => {
 
   return (
   <div className="bg-gradient-to-r from-black via-slate-800 to-black min-h-screen px-6 md:px-20 lg:px-32 pt-20 pb-8 justify-center items-center">
-  <HomeButton />
+ 
   <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">
     Flowchart Generator
   </h1>
@@ -73,7 +73,7 @@ const App = () => {
         )}
       </div>
   
-      {!isLoading &&  flowchart && <Flowchart flowchartData={flowchart} />}
+      {!isLoading && flowchart && <Flowchart flowchartData={flowchart} />}
 
 
       

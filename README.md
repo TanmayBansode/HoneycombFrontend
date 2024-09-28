@@ -1,37 +1,143 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Honeycomb
+
+Welcome to **Project Honeycomb**! This project aims to **develop AI powered tools** for wide range of applications. We welcome contributions from developers and ideas from everyone.
+
+---
+
+## Table of Contents
+- [Getting Started](#getting-started)
+- [File Structure](#file-structure)
+- [How to Contribute as a Developer](#how-to-contribute-as-a-developer)
+- [Sharing Your Idea](#sharing-your-idea)
+- [Code of Conduct](#code-of-conduct)
+- [License](#license)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+To get started with the project, you'll need to clone both the frontend and backend repositories.
 
+### Clone the Repositories
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/frontend-repository.git
+git clone https://github.com/yourusername/backend-repository.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## File Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The project has the following file structure:
 
-## Learn More
+```
+project-root/
+│
+├── frontend/
+│   ├── app/
+│   │   └── calendar/
+│   │       └── page.js
+│   │   └── components/
+│   │       └── yourToolName/
+│   │           └── YourComponent.js
+│   ├── public/
+│   └── ...
+│
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── yourToolName/
+│   │   │       └── controller.js
+│   │   ├── routes/
+│   │   │   └── index.js
+│   │   └── ...
+│   └── ...
+└── README.md
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Contribute as a Developer
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Follow these steps to contribute to the project:
 
-## Deploy on Vercel
+1. **Clone Both Repositories.**
+   ```bash
+   git clone https://github.com/yourusername/frontend-repository.git
+   git clone https://github.com/yourusername/backend-repository.git
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Create a New Folder for the Frontend Feature.**
+   - Navigate to the `app` directory of the frontend.
+   - Create a new folder named after your feature (e.g., `calendar`).
+   ```bash
+   mkdir frontend/app/calendar
+   cd frontend/app/calendar
+   touch page.js
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# HoneycombFrontend
+3. **Ensure Code Modularity.**
+   - Create a directory for any components related to your feature.
+   ```bash
+   mkdir frontend/app/components/yourToolName
+   ```
+
+4. **Write Backend Controller Code.**
+   - Create a new controller file for your feature in the backend.
+   ```bash
+   mkdir backend/src/controllers/yourToolName
+   cd backend/src/controllers/yourToolName
+   touch controller.js
+   ```
+
+5. **Add Routes to the Backend.**
+   - In `backend/src/routes/index.js`, add routes for your feature.
+   ```javascript
+   // In backend/src/routes/index.js
+   const yourToolController = require('../controllers/yourToolName/controller');
+
+   router.get('/your-route', yourToolController.yourFunction);
+   ```
+
+6. **Commit Your Changes.**
+   - Stage your changes and commit with a clear message.
+   ```bash
+   git add .
+   git commit -m "Add [your feature] to frontend and backend"
+   ```
+
+7. **Push Your Changes.**
+   ```bash
+   git push origin your-branch-name
+   ```
+
+8. **Create Pull Requests.**
+   - Create pull requests for both frontend and backend repositories.
+
+9. **Notify the Team via Email.**
+   - Send an email to `adsa@gmail.com` regarding your pull requests.
+   ```markdown
+   Subject: Pull Requests for [Your Feature]
+   ```
+
+---
+
+## Sharing Your Idea
+
+We encourage you to share your ideas for improvements or new features. Please fill out the form in the application or reach out via email to discuss your ideas further.
+
+---
+
+## Code of Conduct
+
+We expect all contributors to adhere to the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Thank you for your interest in contributing to **Project HoneyComb**! We appreciate your help in making the project better.

@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BsSearch } from "react-icons/bs";
-import HomeButton from "../components/HomeButton";
 import QuizComponent from "../components/QuizComponent";
 
 const QuizPage = () => {
@@ -57,7 +56,6 @@ const QuizPage = () => {
 
   return (
     <div className="bg-gradient-to-r from-black via-slate-800 to-black min-h-screen px-6 md:px-20 lg:px-32 pt-20 pb-8 justify-center items-center">
-      <HomeButton />
       <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">
         Quiz Generator
       </h1>
