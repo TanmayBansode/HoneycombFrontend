@@ -129,7 +129,7 @@ export default function Component() {
 
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
           {/* Developer section */}
-          {(activeTab === "developer" || window.innerWidth > 768) && (
+          {(activeTab === "developer" || typeof window !== "undefined" && window.innerWidth > 768) && (
             <motion.div
               ref={developerRef}
               onClick={() => handleTabClick("developer")}
@@ -162,7 +162,7 @@ export default function Component() {
           )}
 
           {/* Idea section */}
-          {(activeTab === "idea" || window.innerWidth > 768) && (
+          {(activeTab === "idea" || typeof window !== "undefined" && window.innerWidth > 768) && (
             <motion.div
               ref={ideaRef}
               onClick={() => handleTabClick("idea")}
