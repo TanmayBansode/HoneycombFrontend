@@ -27,13 +27,11 @@ const Rewrite = () => {
             });
 
             const text = data.text;
-            console.log("Text : ", text);
             setContent(text);
         } catch (error) {
             console.error("Error fetching content:", error);
             setError("Error fetching content. Please try again later.");
         } finally {
-            console.log("Content : ", content);
             setIsLoading(false);
         }
     };

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import TestComponent from './TestComponent';
 
 const QuizComponent = ({ quizName, questions }) => {
-
     
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [userResponses, setUserResponses] = useState({});
